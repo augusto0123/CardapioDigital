@@ -1,0 +1,20 @@
+<div class="container py-4 min-vh-100">
+  <div class="row g-4">
+    <div class="col-12 col-sm-6 col-md-4" *ngFor="let prato of pratos">
+      <div class="card h-100 text-center"
+           [class.bg-light]="!prato.disponivel"
+           [class.text-muted]="!prato.disponivel">
+        <div class="card-body d-flex flex-column justify-content-center">
+          <h5 class="card-title text-uppercase">{{ prato.nome }}</h5>
+          <p class="card-text fw-bold" [ngClass]="prato.categoria | categoriaCor">
+            {{ prato.categoria }}
+          </p>
+          <p class="card-text fw-bold">R$ {{ prato.preco.toFixed(2).replace('.', ',') }}</p>
+          <div *ngIf="!prato.disponivel" class="mt-auto badge bg-secondary">
+            Indisponível
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

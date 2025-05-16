@@ -1,0 +1,57 @@
+.text-purple {
+  color: #8e44ad !important;
+}
+.text-orange {
+  color: #fd7e14 !important;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .fw-bold {
+    font-size: 1.1rem;
+  }
+
+  .badge {
+    font-size: 0.95rem;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    margin-top: 0.5em;
+    background: #fff;
+    color: #ff4d4f;
+    font-weight: bold;
+  }
+}
+
+.bg-light {
+  background: #f8f9fa !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
